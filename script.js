@@ -3,24 +3,19 @@ function showPage(pageId) {
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.style.display = 'none');
 
-    // Show modal and set content
-    const modalPage = document.getElementById('modal-page');
-    modalPage.innerHTML = document.getElementById(pageId).innerHTML;
+    // Show selected page
+    const selectedPage = document.getElementById(pageId);
+    selectedPage.style.display = 'flex';
 
-    // Show modal with a fade-in effect
-    const modal = document.getElementById('modal');
-    modal.style.display = 'flex';
+    // Add transition effect
+    selectedPage.style.opacity = 0; // Start hidden
     setTimeout(() => {
-        modal.style.opacity = 1; // Fade-in effect
-    }, 10); // Small timeout to allow the display change to take effect
+        selectedPage.style.opacity = 1; // Fade in
+    }, 10);
 }
 
 function closeModal() {
-    const modal = document.getElementById('modal');
-    modal.style.opacity = 0; // Fade-out effect
-    setTimeout(() => {
-        modal.style.display = 'none'; // Hide the modal after fade-out
-    }, 300); // Time to match the fade-out duration
+    document.getElementById('modal').style.display = 'none';
 }
 
 function getClimate() {
@@ -29,7 +24,7 @@ function getClimate() {
         alert("Please enter a location!");
         return; // Stop if the input is empty
     }
-  
+    
     const apiKey = '5SEG32LPTE5AKS4V775ATQ7RP'; // Use your Visual Crossing API key
     const apiUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&include=current&key=${apiKey}&contentType=json`;
 
@@ -46,9 +41,9 @@ function getClimate() {
             const humidity = data.currentConditions.humidity;
 
             document.getElementById('climate-data').innerHTML = `
-                <strong>Temperature:</strong> ${temp}°F<br>
-                <strong>Weather:</strong> ${weather}<br>
-                <strong>Humidity:</strong> ${humidity}%
+                <strong style="font-size: 24px;">Temperature:</strong> <strong>${temp}°F</strong><br>
+                <strong style="font-size: 24px;">Weather:</strong> <strong>${weather}</strong><br>
+                <strong style="font-size: 24px;">Humidity:</strong> <strong>${humidity}%</strong>
             `;
         })
         .catch(error => {
