@@ -1,3 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #4CAF50;
+    padding: 10px;
+}
+
+.menu button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+.content {
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
 #modal {
     position: fixed;
     top: 0;
@@ -27,4 +69,10 @@
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
+}
+
+.location-input {
+    padding: 10px;
+    width: 70%;
+    margin: 10px 0;
 }
