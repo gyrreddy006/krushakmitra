@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krushaka Mitra</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Tree Background -->
+    <div class="tree-background"></div>
+
     <!-- Navigation Menu -->
     <div class="menu">
         <button onclick="showPage('find-plant')">Find Your Plant</button>
@@ -48,48 +51,6 @@
     <div class="page" id="feedback" style="display:none;">
         <h3>Feedback</h3>
         <p>Your feedback is important to us!</p>
-    </div>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krushaka Mitra</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <!-- Tree Background -->
-    <div class="tree-background"></div>
-
-    <!-- Navigation Menu -->
-    <div class="menu">
-        <button onclick="showPage('find-plant')">Find Your Plant</button>
-        <button onclick="showPage('get-recommendations')">Get Recommendations</button>
-        <button onclick="showPage('climate')">Climate Info</button>
-        <button onclick="showPage('feedback')">Feedback</button>
-    </div>
-
-    <!-- Centered App Name and Aim -->
-    <div class="content">
-        <h1>Krushaka Mitra</h1>
-        <h2>Aim: To make the world green and learn how to plant and get crops</h2>
-    </div>
-
-    <!-- Modal for displaying page content -->
-    <div id="modal" style="display:none; opacity: 0; transition: opacity 0.3s;">
-        <div id="modal-page"></div>
-        <button onclick="closeModal()">Close</button>
-    </div>
-
-    <!-- Example content pages -->
-    <div class="page" id="find-plant" style="display:none;">
-        <h3>Find Your Plant</h3>
-        <p>Here you can find information about various plants.</p>
-    </div>
-    <div class="page" id="get-recommendations" style="display:none;">
-        <h3>
-        </h3>
     </div>
 </body>
 </html>
