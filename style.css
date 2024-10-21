@@ -70,6 +70,98 @@ h2 {
     align-items: center;
     transition: all 0.3s ease;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a8e6cf; /* Light green background */
+    position: relative; /* For positioning the tree */
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #4CAF50;
+    padding: 10px;
+}
+
+.menu button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+.content {
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-page {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.page {
+    margin: 0;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.location-input {
+    padding: 10px;
+    width: 70%;
+    margin: 10px 0;
+}
+
+/* Add tree background */
+.tree-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 0 C 20 20, 20 40, 50 40 C 80 40, 80 20, 50 0" fill="white"/><path d="M50 40 L 30 60 L 70 60 Z" fill="white"/><path d="M45 60 C 45 80, 55 80, 55 60 Z" fill="white"/></svg>') no-repeat center center; 
+    background-size: contain;
+    z-index: -1; /* Place behind other content */
+}
+
 
 .location-input {
     padding: 10px;
