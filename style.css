@@ -15,22 +15,22 @@ body {
 .navbar {
   background-color: #4caf50;
   padding: 10px;
-}
-
-.navbar ul {
-  list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Center the menu horizontally */
+  flex-wrap: wrap; /* Allow the menu to wrap on small screens */
+  z-index: 1000; /* Ensure it appears above other content */
 }
 
-.navbar ul li a {
+.navbar a {
   color: white;
+  padding: 10px 15px;
   text-decoration: none;
   font-size: 1.2rem;
+  transition: background-color 0.3s;
 }
 
-.navbar ul li a:hover {
-  text-decoration: underline;
+.navbar a:hover {
+  background-color: #45a049;
 }
 
 /* Page Styling */
@@ -81,14 +81,6 @@ textarea {
     font-size: 16px; /* Increase font size for readability on small screens */
   }
 
-  .navbar ul {
-    flex-direction: column; /* Stack navigation items vertically */
-  }
-
-  .navbar ul li {
-    margin: 5px 0; /* Add margin for better spacing */
-  }
-
   input[type="text"], textarea {
     width: 90%; /* Make input fields and textarea full width */
     margin-top: 10px; /* Adjust margin */
@@ -101,11 +93,14 @@ textarea {
   h1 {
     font-size: 2.5rem; /* Adjust title size */
   }
+
+  .navbar a {
+    font-size: 1rem; /* Adjust font size for mobile */
+    padding: 10px; /* Adjust padding */
+  }
 }
 
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
-
