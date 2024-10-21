@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krushaka Mitra</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krushaka Mitra</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="#" onclick="showPage('home')">Home</a>
-    <a href="#" onclick="showPage('find-plant')">Find Your Plant</a>
-    <a href="#" onclick="showPage('recommendation')">Get Recommendation</a>
-    <a href="#" onclick="showPage('climate')">Climate</a>
-    <a href="#" onclick="showPage('feedback')">Feedback</a>
-  </nav>
+    <!-- Navigation Menu -->
+    <div class="menu">
+        <button onclick="showPage('find-plant')">Find Your Plant</button>
+        <button onclick="showPage('get-recommendations')">Get Recommendations</button>
+        <button onclick="showPage('climate')">Climate Info</button>
+        <button onclick="showPage('feedback')">Feedback</button>
+    </div>
 
-  <!-- Home Page -->
-  <div id="home" class="page">
-    <h1>Krushaka Mitra</h1>
-    <p>Our aim is to make the world green and help you learn how to plant and grow crops!</p>
-  </div>
+    <!-- Centered App Name and Aim -->
+    <div class="content">
+        <h1>Krushaka Mitra</h1>
+        <h2>Aim: To make the world green and learn how to plant and get crops</h2>
+    </div>
 
-  <!-- Find Your Plant Page -->
-  <div id="find-plant" class="page">
-    <h2>Find Your Plant</h2>
-    <p>Discover more about the plants around you.</p>
-  </div>
+    <!-- Modal for displaying page content -->
+    <div id="modal" style="display:none; opacity: 0; transition: opacity 0.3s;">
+        <div id="modal-page"></div>
+        <button onclick="closeModal()">Close</button>
+    </div>
 
-  <!-- Get Recommendation Page -->
-  <div id="recommendation" class="page">
-    <h2>Get Recommendations</h2>
-    <p>Personalized plant care tips based on your environment and plant type.</p>
-  </div>
-
-  <!-- Climate Page -->
-  <div id="climate" class="page">
-    <h2>Climate Information</h2>
-    <p>Enter your location to check the climate conditions for your plants.</p>
-    <input type="text" id="location" placeholder="Enter city or place">
-    <button onclick="getClimate()">Get Climate</button>
-    <p id="climate-data"></p>
-  </div>
-
-  <!-- Feedback Page -->
-  <div id="feedback" class="page">
-    <h2>Feedback</h2>
-    <p>We would love to hear your thoughts on our app.</p>
-    <textarea placeholder="Enter your feedback here..."></textarea>
-    <button>Submit</button>
-  </div>
-
-  <script src="script.js"></script>
+    <!-- Example content pages -->
+    <div class="page" id="find-plant" style="display:none;">
+        <h3>Find Your Plant</h3>
+        <p>Here you can find information about various plants.</p>
+    </div>
+    <div class="page" id="get-recommendations" style="display:none;">
+        <h3>Get Recommendations</h3>
+        <p>Here you can get recommendations for plants based on your climate.</p>
+    </div>
+    <div class="page" id="climate" style="display:none;">
+        <h3>Climate Info</h3>
+        <div style="text-align:center;">
+            <input type="text" id="location" placeholder="Enter your location" class="location-input">
+            <button onclick="getClimate()">Get Weather</button>
+        </div>
+        <div id="climate-data" style="text-align:center; margin-top: 20px;"></div>
+    </div>
+    <div class="page" id="feedback" style="display:none;">
+        <h3>Feedback</h3>
+        <p>Your feedback is important to us!</p>
+    </div>
 </body>
 </html>
