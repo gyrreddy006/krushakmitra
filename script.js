@@ -39,4 +39,3 @@ function getClimate() {
       document.getElementById('climate-data').textContent = "Error fetching climate data. " + error.message;
     });
 }
-
