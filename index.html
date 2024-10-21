@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krushaka Mitra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#" onclick="showPage('home')">Home</a></li>
+      <li><a href="#" onclick="showPage('find-plant')">Find Your Plant</a></li>
+      <li><a href="#" onclick="showPage('recommendation')">Get Recommendation</a></li>
+      <li><a href="#" onclick="showPage('climate')">Climate</a></li>
+      <li><a href="#" onclick="showPage('feedback')">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Page -->
+  <div id="home" class="page">
+    <h1>Krushaka Mitra</h1>
+    <p>Our aim is to make the world green and help you learn how to plant and grow crops!</p>
+  </div>
+
+  <!-- Find Your Plant Page -->
+  <div id="find-plant" class="page">
+    <h2>Find Your Plant</h2>
+    <p>Discover more about the plants around you.</p>
+  </div>
+
+  <!-- Get Recommendation Page -->
+  <div id="recommendation" class="page">
+    <h2>Get Recommendations</h2>
+    <p>Personalized plant care tips based on your environment and plant type.</p>
+  </div>
+
+  <!-- Climate Page -->
+  <div id="climate" class="page">
+    <h2>Climate Information</h2>
+    <p>Enter your location to check the climate conditions for your plants.</p>
+    <input type="text" id="location" placeholder="Enter city or place">
+    <button onclick="getClimate()">Get Climate</button>
+    <p id="climate-data"></p>
+  </div>
+
+  <!-- Feedback Page -->
+  <div id="feedback" class="page">
+    <h2>Feedback</h2>
+    <p>We would love to hear your thoughts on our app.</p>
+    <textarea placeholder="Enter your feedback here..."></textarea>
+    <button>Submit</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
