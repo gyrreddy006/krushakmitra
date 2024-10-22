@@ -122,6 +122,7 @@ button:hover {
 
 .climate-info {
     font-weight: bold; /* Make the climate info bold */
+    background-image: url('background.png');
 }
 
 strong {
