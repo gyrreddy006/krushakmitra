@@ -1,13 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4; /* Fallback color */
-    background-image: url('background.png'); /* Add your background image */
+    background-image: url('images/your-background-image.jpg'); /* Add your background image */
     background-size: cover; /* Make the background cover the entire page */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     margin: 0;
     padding: 0;
     height: 100vh; /* Full height */
+    color: white; /* Set text color to white */
 }
 
 .menu {
@@ -18,23 +19,27 @@ body {
 .menu button {
     padding: 10px 15px;
     margin: 0 5px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+    background-color: transparent; /* Make background transparent */
+    color: white; /* Text color */
+    border: 2px solid black; /* Black outline */
     cursor: pointer;
+    font-weight: bold; /* Make button text bold */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .menu button:hover {
-    background-color: #45a049;
+    background-color: rgba(255, 255, 255, 0.2); /* Add a light background on hover */
 }
 
 .content {
     text-align: center;
-    margin-top: 100px; /* Centered vertically on larger screens */
+    margin-top: calc(50vh - 100px); /* Center vertically */
 }
 
 h1 {
-    color: #4CAF50;
+    color: white; /* Text color */
+    font-weight: bold; /* Make text bold */
+    text-decoration: underline; /* Underline the text */
 }
 
 .location-input {
@@ -45,78 +50,4 @@ h1 {
     font-weight: bold; /* Make it bold */
 }
 
-button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-#modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#modal-page {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 500px;
-}
-
-.page {
-    margin: 0; /* Removed margin */
-    padding: 20px; /* Added padding for content */
-    height: calc(100vh - 60px); /* Full height minus menu height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.climate-info {
-    font-weight: bold; /* Make the climate info bold */
-}
-
-strong {
-    font-weight: bold; /* Make all strong texts bold */
-}
-
-/* Mobile Responsive Styles */
-@media (max-width: 600px) {
-    .menu button {
-        padding: 8px 10px;
-        margin: 0 3px;
-        font-size: 14px;
-    }
-
-    .location-input {
-        width: 150px; /* Adjusted for smaller screens */
-    }
-
-    .content {
-        margin-top: 50px; /* Adjusted for smaller screens */
-    }
-
-    h1 {
-        font-size: 24px; /* Adjusted font size for smaller screens */
-    }
-
-    h2 {
-        font-size: 16px; /* Adjusted font size for smaller screens */
-    }
-}
+/* Rest of your CSS remains the same */
