@@ -1,56 +1,109 @@
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Fallback color */
-    background-image: url('background.png'); /* Add your background image */
-    background-size: cover; /* Make the background cover the entire page */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-color: #4CAF50; /* Green background */
+    color: #FFFFFF; /* Default text color */
     margin: 0;
     padding: 0;
-    height: 100vh; /* Full height */
-    color: white; /* Set text color to white */
+    height: 100vh;
 }
 
+/* Navigation Menu */
 .menu {
     text-align: center;
-    margin-bottom: 20px; /* Adjusted margin for spacing */
+    margin-bottom: 20px;
 }
 
 .menu button {
-    padding: 10px 15px;
+    padding: 15px 25px; /* Increased padding for bigger buttons */
     margin: 0 5px;
-    background-color: transparent; /* Make background transparent */
-    color: white; /* Text color */
-    border: 2px solid black; /* Black outline */
+    background-color: transparent; /* Transparent background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #FFFFFF; /* White border */
+    border-radius: 25px; /* Oval shape */
+    font-weight: bold; /* Bold text */
     cursor: pointer;
-    font-weight: bold; /* Make button text bold */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-size: 18px; /* Bigger letters */
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
 }
 
 .menu button:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Add a light background on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly visible background on hover */
 }
 
+/* Content Styles */
 .content {
     text-align: center;
-    margin-top: calc(50vh - 100px); /* Center vertically */
+    margin-top: 100px;
 }
 
-.content h1 {
-    color: white; /* Change the color to white */
-    font-size: 48px; /* Increase the font size */
-    font-weight: bold; /* Ensure it's bold */
-    text-decoration: underline; /* Underline the text */
+h1 {
+    color: #FFFFFF; /* White text */
+    font-size: 48px; /* Bigger font size for Krushaka Mitra */
+    font-weight: bold; /* Bold text */
+    text-decoration: underline; /* Underlined */
 }
 
-}
-
+/* Input Styles */
 .location-input {
     padding: 10px;
     margin: 5px;
     width: 200px;
-    font-size: 20px; /* Increased font size */
-    font-weight: bold; /* Make it bold */
+    font-size: 20px;
+    font-weight: bold;
 }
 
-/* Rest of your CSS remains the same */
+/* Modal Styles */
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-page {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    color: black; /* Black text for modal content */
+}
+
+/* Page Styles */
+.page {
+    margin: 0;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 600px) {
+    .menu button {
+        padding: 10px 15px;
+        margin: 0 3px;
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .location-input {
+        width: 150px; /* Adjusted for smaller screens */
+    }
+
+    .content {
+        margin-top: 50px; /* Adjusted for smaller screens */
+    }
+
+    h1 {
+        font-size: 36px; /* Adjusted font size for smaller screens */
+    }
+}
