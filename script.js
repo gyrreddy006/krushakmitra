@@ -3,12 +3,31 @@ function showPage(pageId) {
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.style.display = 'none');
 
-    // Show selected page
-    document.getElementById(pageId).style.display = 'flex';
+    // Show modal and set content
+    const modalPage = document.getElementById('modal-page');
+    modalPage.innerHTML = document.getElementById(pageId).innerHTML;
+
+    // Show modal with a fade-in effect
+    const modal = document.getElementById('modal');
+    modal.style.display = 'flex';
+    setTimeout(() => {
+        modal.style.opacity = 1; // Fade-in effect
+    }, 10); // Small timeout to allow the display change to take effect
+
+    // Optional: Add a close functionality when clicking outside of the modal content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
 }
 
 function closeModal() {
-    document.getElementById('modal').style.display = 'none';
+    const modal = document.getElementById('modal');
+    modal.style.opacity = 0; // Fade-out effect
+    setTimeout(() => {
+        modal.style.display = 'none'; // Hide the modal after fade-out
+    }, 300); // Time to match the fade-out duration
 }
 
 function getClimate() {
@@ -42,58 +61,4 @@ function getClimate() {
         .catch(error => {
             document.getElementById('climate-data').textContent = "Error fetching climate data: " + error.message;
         });
-}
-function showPage(pageId) {
-    // Hide all pages
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => page.style.display = 'none');
-
-    // Show modal and set content
-    const modalPage = document.getElementById('modal-page');
-    modalPage.innerHTML = document.getElementById(pageId).innerHTML;
-
-    // Show modal with a fade-in effect
-    const modal = document.getElementById('modal');
-    modal.style.display = 'flex';
-    setTimeout(() => {
-        modal.style.opacity = 1; // Fade-in effect
-    }, 10); // Small timeout to allow the display change to take effect
-
-    // Optional: Add a close functionality when clicking outside of the modal content
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-}
-
-function closeModal() {
-    const modal = document.getElementById('modal');
-    modal.style.opacity = 0; // Fade-out effect
-    setTimeout(() => {
-        modal.style.display = 'none'; // Hide the modal after fade-out
-    }, 300); // Time to match the fade-out durationfunction showPage(pageId) {
-    // Hide all pages
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => page.style.display = 'none');
-
-    // Show modal and set content
-    const modalPage = document.getElementById('modal-page');
-    modalPage.innerHTML = document.getElementById(pageId).innerHTML;
-
-    // Show modal with a fade-in effect
-    const modal = document.getElementById('modal');
-    modal.style.display = 'flex';
-    setTimeout(() => {
-        modal.style.opacity = 1; // Fade-in effect
-    }, 10); // Small timeout to allow the display change to take effect
-
-    // Optional: Add a close functionality when clicking outside of the modal content
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-}
-
 }
