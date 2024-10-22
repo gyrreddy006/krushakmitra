@@ -102,6 +102,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
+    background-color: rgba(244, 244, 244, 0.8); /* Light background with transparency */
 }
 
 .climate-info {
