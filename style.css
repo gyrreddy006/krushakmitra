@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4; /* Fallback color */
-    background-image: url('background.png'); /* Add your background image */
+    background-image: url('images/your-background-image.jpg'); /* Add your background image */
     background-size: cover; /* Make the background cover the entire page */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
@@ -102,7 +102,22 @@ button:hover {
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
-    background-color: rgba(244, 244, 244, 0.8); /* Light background with transparency */
+}
+
+#find-plant {
+    background-color: rgba(255, 255, 255, 0.8); /* Light color for Find Your Plant */
+}
+
+#get-recommendations {
+    background-color: rgba(240, 240, 255, 0.8); /* Light blue for Get Recommendations */
+}
+
+#climate {
+    background-color: rgba(255, 240, 240, 0.8); /* Light pink for Climate Info */
+}
+
+#feedback {
+    background-color: rgba(240, 255, 240, 0.8); /* Light green for Feedback */
 }
 
 .climate-info {
