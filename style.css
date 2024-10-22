@@ -36,10 +36,13 @@ body {
     margin-top: calc(50vh - 100px); /* Center vertically */
 }
 
-h1 {
-    color: white; /* Text color */
-    font-weight: bold; /* Make text bold */
+.content h1 {
+    color: white; /* Change the color to white */
+    font-size: 48px; /* Increase the font size */
+    font-weight: bold; /* Ensure it's bold */
     text-decoration: underline; /* Underline the text */
+}
+
 }
 
 .location-input {
